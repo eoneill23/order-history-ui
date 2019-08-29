@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './OrderForm.css'
 
 class OrderForm extends Component {
   constructor() {
@@ -38,6 +39,7 @@ class OrderForm extends Component {
     return (
       <form className='purchase-form'>
         <input 
+          className='input'
           type='text'
           name='img'
           value={this.state.img}
@@ -45,6 +47,7 @@ class OrderForm extends Component {
           onChange={this.handleInputChange}
         />
         <input
+          className='input'
           type='text'
           name='name'
           value={this.state.name}
@@ -52,6 +55,7 @@ class OrderForm extends Component {
           onChange={this.handleInputChange}
         />
         <input
+          className='input'
           type='text'
           name='description'
           value={this.state.description}
@@ -59,13 +63,14 @@ class OrderForm extends Component {
           onChange={this.handleInputChange}
         />
         <input
+          className='input'
           type='text'
           name='price'
           value={this.state.price}
           placeholder='Enter an order price'
           onChange={this.handleInputChange}
         />
-        <button onClick={(e) => this.createOrder(e)}>
+        <button className='form-btn' onClick={(e) => this.createOrder(e)}>
           Add Purchase
         </button>
       </form>
