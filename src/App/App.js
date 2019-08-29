@@ -30,9 +30,9 @@ class App extends Component {
 
   deleteOrder = (id) => {
     let filteredOrders = this.state.orders.filter(order => order.id !== id)
-    this.setState({orders: filteredOrders});
     removeOrder(id)
     .catch(error => this.setState({ error: 'There was an issue deleting your order'}))
+    this.setState({orders: filteredOrders});
   }
 
   render() {

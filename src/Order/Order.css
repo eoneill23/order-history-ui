@@ -3,7 +3,7 @@
   background-color: white;
   box-shadow: 5px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 20px 0 20px 0;
   width: 90%;
 }
@@ -15,4 +15,19 @@
 
 .price {
   font-weight: bold;
+}
+
+.content-wrapper {
+  width: 60%;
+}
+
+.button-wrapper {
+  width: 10%;
+}
+
+.order-btn {
+  background-color: red;
+  color: white;
+  height: 30px;
+  width: 100%;
 }

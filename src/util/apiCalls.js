@@ -38,7 +38,7 @@ export const removeOrder = (id) => {
       'Content-Type': 'application/json'
     }
   }
-  return fetch(`http://localhost:3001/api/v1/purchases/${id}`)
+  return fetch(`http://localhost:3001/api/v1/purchases/${id}`, options)
   .then(response => {
     if(!response.ok) {
       throw Error('There was an issue deleting your order.')
