@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderList should match the snapshot with all data passed in correctly 1`] = `
+<section
+  className="order-section"
+>
+  <Order
+    deleteOrder={[MockFunction]}
+    id={1}
+    img="google.com"
+    key="1"
+    name="Television"
+    price="200"
+  />
+  <Order
+    deleteOrder={[MockFunction]}
+    id={2}
+    img="facebook.com"
+    key="2"
+    name="Radio"
+    price="100"
+  />
+</section>
+`;
