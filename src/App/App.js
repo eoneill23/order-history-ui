@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OrderList from '../OrderList/OrderList.js';
 import OrderForm from '../OrderForm/OrderForm.js';
-import { fetchOrders } from '../util/apiCalls.js';
+import { fetchOrders, addOrder } from '../util/apiCalls.js';
 import './App.css';
 import Order from '../Order/Order.js';
 
@@ -23,7 +23,9 @@ class App extends Component {
   }
 
   addOrder = (newOrder) => {
-    console.log(newOrder)
+    this.setState({orders: [...this.state.orders, newOrder]});
+    addOrder(newOrder)
+      .catch(error => this.setState({ error: 'There was an issue adding your order.'}))
   }
 
   render() {
