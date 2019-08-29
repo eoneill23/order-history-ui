@@ -15,7 +15,14 @@ class App extends Component {
   }
 
   render() {
-    
+    return (
+      <>
+      <header></header>
+      <main>
+        <OrderList orders={this.state.orders}/>
+      </main>
+      </>
+    )
   }
 }
 
