@@ -1,16 +1,19 @@
 import React from 'react';
 import './Order.css'
 
-const Order = ({ id, img, name, description, price }) => {
+const Order = ({ id, img, name, description, price, deleteOrder }) => {
 
   return (
     <article className='order'>
       <img src={img} alt='Image of a placed order' className='order-img'></img>
       <div>
-      <h3>{name}</h3>
-      <p>{description}</p>
+        <h3>{name}</h3>
+        <p>{description}</p>
       </div>
-      <p className='price'>${price}</p>
+      <div>
+        <p className='price'>${price}</p>
+        <button onClick={() => deleteOrder(id)}></button>
+      </div>
     </article>
   )
 }

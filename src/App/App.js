@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OrderList from '../OrderList/OrderList.js';
 import OrderForm from '../OrderForm/OrderForm.js';
-import { fetchOrders, addOrder } from '../util/apiCalls.js';
+import { fetchOrders, addOrder, removeOrder } from '../util/apiCalls.js';
 import './App.css';
 import Order from '../Order/Order.js';
 
@@ -25,7 +25,14 @@ class App extends Component {
   addOrder = (newOrder) => {
     this.setState({orders: [...this.state.orders, newOrder]});
     addOrder(newOrder)
-      .catch(error => this.setState({ error: 'There was an issue adding your order.'}))
+    .catch(error => this.setState({ error: 'There was an issue adding your order.'}))
+  }
+
+  deleteOrder = (id) => {
+    let filteredOrders = this.state.orders.filter(order => order.id !== id)
+    this.setState({orders: filteredOrders});
+    removeOrder(id)
+    .catch(error => this.setState({ error: 'There was an issue deleting your order'}))
   }
 
   render() {
@@ -36,7 +43,7 @@ class App extends Component {
         <OrderForm addOrder={this.addOrder}/>
       </header>
       <main className='purchase-container'>
-        <OrderList orders={this.state.orders}/>
+        <OrderList orders={this.state.orders} deleteOrder={this.deleteOrder}/>
       </main>
       </>
     )
