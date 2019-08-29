@@ -23,8 +23,8 @@ class App extends Component {
   render() {
     return (
       <>
-      <header></header>
-      <main>
+      <header><h1>My order history</h1></header>
+      <main className='purchase-container'>
         <OrderList orders={this.state.orders}/>
       </main>
       </>

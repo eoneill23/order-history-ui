@@ -1,0 +1,18 @@
+.order {
+  align-items: center;
+  background-color: white;
+  box-shadow: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 20px 0;
+  width: 90%;
+}
+
+.order-img {
+  height: 100px;
+  width: 100px;
+}
+
+.price {
+  font-weight: bold;
+}

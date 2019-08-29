@@ -1,13 +1,16 @@
 import React from 'react';
+import './Order.css'
 
 const Order = ({ id, img, name, description, price }) => {
 
   return (
-    <article>
-      <img src={img} alt='Image of a placed order'></img>
+    <article className='order'>
+      <img src={img} alt='Image of a placed order' className='order-img'></img>
+      <div>
       <h3>{name}</h3>
       <p>{description}</p>
-      <p>{price}</p>
+      </div>
+      <p className='price'>${price}</p>
     </article>
   )
 }

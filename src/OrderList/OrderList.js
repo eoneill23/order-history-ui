@@ -1,4 +1,5 @@
 import Order from '../Order/Order.js';
+import './OrderList.css';
 import React from 'react';
 
 const OrderList = ({ orders }) => {
@@ -7,7 +8,7 @@ const OrderList = ({ orders }) => {
   })
 
   return (
-    <section>
+    <section className='order-section'>
       {listOfOrders}
     </section>
   )
