@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order should match the snapshot with all data passed in correctly 1`] = `
+<article
+  className="order"
+>
+  <img
+    alt="Image of a placed order"
+    className="order-img"
+    src="twitter.com"
+  />
+  <div
+    className="content-wrapper"
+  >
+    <h3>
+      stereo
+    </h3>
+    <p>
+      cool stereo
+    </p>
+  </div>
+  <div
+    className="button-wrapper"
+  >
+    <p
+      className="price"
+    >
+      $
+      200
+    </p>
+    <button
+      className="order-btn"
+      onClick={[Function]}
+    >
+      Remove From History
+    </button>
+  </div>
+</article>
+`;
