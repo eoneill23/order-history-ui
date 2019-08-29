@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import OrderList from '../OrderList/OrderList.js';
-// import { fetchOrders } from '../util/apiCalls.js';
+import { fetchOrders } from '../util/apiCalls.js';
 import './App.css';
 
 class App extends Component {
@@ -13,11 +13,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/api/v1/purchases')
-    .then(res => res.json())
+    fetchOrders()
     .then(data => this.setState({orders: data}))
-    .catch(err => {
-      this.setState({err: 'There was an issue getting your orders.'})
+    .catch(error => {
+      this.setState({err: 'There was an error getting your orders.'})
     })
   }
 
