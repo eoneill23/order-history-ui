@@ -16,7 +16,7 @@ export const addOrder = (newOrder) => {
     method: 'POST',
     body: JSON.stringify({...newOrder}),
     headers: {
-      'Content-type': 'application/json'
+      'Content-Type': 'application/json'
     }
   }
   return fetch('http://localhost:3001/api/v1/purchases', options)

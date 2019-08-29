@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import App from './App';
 
@@ -39,6 +38,6 @@ describe('App', () => {
     wrapper.instance().deleteOrder(1);
 
     expect(wrapper.state('orders')).toEqual(expected);
-  })
+  });
 });
 
